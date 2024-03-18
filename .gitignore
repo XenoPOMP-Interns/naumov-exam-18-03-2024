@@ -1,0 +1,7 @@
+node_modules
+.idea
+
+# В папке css мне нужен только
+# файл main.css
+src/css/*
+!src/css/main.css

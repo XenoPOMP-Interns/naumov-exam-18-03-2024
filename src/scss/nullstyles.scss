@@ -1,0 +1,28 @@
+/* Нулевые стили */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 20px;
+    font-family: system-ui;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+/* Нулевые стили конец */

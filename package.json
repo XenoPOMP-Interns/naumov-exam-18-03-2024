@@ -1,0 +1,9 @@
+{
+  "name": "exam-app",
+  "author": "Наумов Александр, ИС1-45",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.2.0",
+    "@types/node": "^20.11.28",
+    "prettier": "2.8.1"
+  }
+}

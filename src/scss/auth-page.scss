@@ -1,0 +1,36 @@
+@import "templates";
+
+body.authPage {
+  @extend %flexCenter;
+
+  form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1em;
+    filter: drop-shadow(0px 0px 15px rgb(0 0 0 / .25));
+    background: white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      grid-column: span 2;
+      text-align: center;
+    }
+
+    button[type~=submit] {
+      @extend %flexCenter;
+
+      grid-column: span 2;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    a.redirect {
+      grid-column: span 2;
+      text-align: center;
+      font-size: .75em;
+    }
+  }
+}
