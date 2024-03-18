@@ -1,4 +1,41 @@
 @import "../templates";
 
 body.mainPage {
+  padding: 1rem;
+
+  h1.main__page__heading {
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .group__summary__card {
+    @include fancyShadow(8px);
+
+    background: white;
+    padding: 1rem;
+    border-radius: .6em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+    header {
+      h3 {
+        font-weight: 600;
+      }
+    }
+
+    section.summary__info {
+      display: flex;
+      flex-direction: column;
+      column-gap: 1em;
+      row-gap: .25em;
+      font-size: .85em;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
 }

@@ -18,9 +18,22 @@
 </head>
 
 <body class="mainPage">
-  <div>Hello world!</div>
+  <h1 class="main__page__heading">Список групп</h1>
 
-  <button onclick="logout()">Выйти</button>
+  <a href="groups/index.php?groupId=1">
+    <div class="group__summary__card">
+      <header>
+        <h3>Group name</h3>
+      </header>
+
+      <section class="summary__info">
+        <div>Студентов в группе: <strong>12</strong></div>
+        <div>Средняя успеваемость: <strong>4.9</strong></div>
+      </section>
+    </div>
+  </a>
+
+<!--  <button onclick="logout()">Выйти</button>-->
 </body>
 
 </html>
