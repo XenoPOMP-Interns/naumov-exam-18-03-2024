@@ -57,7 +57,6 @@
           
                   <section class="summary__info">
                     <div>Студентов в группе: <strong>%d</strong></div>
-                    <div>Средняя успеваемость: <strong>N/A</strong></div>
                   </section>
                 </div>
               </a>
