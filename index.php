@@ -20,18 +20,53 @@
 <body class="mainPage">
   <h1 class="main__page__heading">Список групп</h1>
 
-  <a href="groups/index.php?groupId=1">
-    <div class="group__summary__card">
-      <header>
-        <h3>Group name</h3>
-      </header>
+  <section class="groups__summaries">
+      <?php
+      require 'src/php/server.php';
 
-      <section class="summary__info">
-        <div>Студентов в группе: <strong>12</strong></div>
-        <div>Средняя успеваемость: <strong>4.9</strong></div>
-      </section>
-    </div>
-  </a>
+      $query = '
+      SELECT 
+        group_id, group_name, COUNT(student_group_id) as total_students 
+      FROM `groups`
+      LEFT JOIN `students` 
+        on students.student_group_id = groups.group_id
+          
+      GROUP BY group_id
+    ';
+
+      // Получаем список групп с аггрегированными данными
+      $records = exec_query($query, null);
+
+      // Обрабатываем ошибку.
+      if (!$records) {
+          echo '<p class="main__page__error">Произошла ошибка!</p>';
+      }
+      else {
+          // Обрабатываем все входы
+          foreach ($records as $record) {
+              $group_id = $record['group_id'];
+              $group_name = $record['group_name'];
+              $total_students = $record['total_students'];
+
+              echo sprintf('
+              <a href="groups/index.php?groupId=%d">
+                <div class="group__summary__card">
+                  <header>
+                    <h3>%s</h3>
+                  </header>
+          
+                  <section class="summary__info">
+                    <div>Студентов в группе: <strong>%d</strong></div>
+                    <div>Средняя успеваемость: <strong>N/A</strong></div>
+                  </section>
+                </div>
+              </a>
+              ', $group_id, $group_name, $total_students);
+          }
+      }
+      ?>
+  </section>
+
 
 <!--  <button onclick="logout()">Выйти</button>-->
 </body>

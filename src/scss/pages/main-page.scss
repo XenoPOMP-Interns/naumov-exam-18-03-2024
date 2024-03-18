@@ -10,32 +10,42 @@ body.mainPage {
     margin-bottom: 1rem;
   }
 
-  .group__summary__card {
-    @include fancyShadow(8px);
-
-    background: white;
-    padding: 1rem;
-    border-radius: .6em;
+  .groups__summaries {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 1rem;
 
-    header {
-      h3 {
-        font-weight: 600;
-      }
-    }
+    .group__summary__card {
+      @include fancyShadow(8px);
 
-    section.summary__info {
+      background: white;
+      padding: 1rem;
+      border-radius: .6em;
       display: flex;
       flex-direction: column;
-      column-gap: 1em;
-      row-gap: .25em;
-      font-size: .85em;
+      gap: .5em;
 
-      strong {
-        font-weight: 600;
+      header {
+        h3 {
+          font-weight: 600;
+        }
+      }
+
+      section.summary__info {
+        display: flex;
+        flex-direction: column;
+        column-gap: 1em;
+        row-gap: .25em;
+        font-size: .85em;
+
+        strong {
+          font-weight: 600;
+        }
       }
     }
+  }
+
+  .main__page__error {
+    color: red;
   }
 }
