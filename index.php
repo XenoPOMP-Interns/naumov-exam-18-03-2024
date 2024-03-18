@@ -17,7 +17,7 @@
     <title>Главная</title>
 </head>
 
-<body>
+<body class="mainPage">
   <div>Hello world!</div>
 
   <button onclick="logout()">Выйти</button>

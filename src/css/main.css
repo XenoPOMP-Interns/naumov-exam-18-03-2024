@@ -58,4 +58,10 @@ body.authPage form a.redirect {
   font-size: 0.75em;
 }
 
+body.authPage, body.authPage form button[type~=submit] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=main.css.map */
